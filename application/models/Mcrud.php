@@ -24,6 +24,7 @@ class Mcrud extends CI_Model {
 	{
 			$this->db->from($tbl);
 			$this->db->join($tbl2, "$tbl2.$join=$tbl.$join");
+			$this->db->order_by('id_barang', 'DESC');
 			$query = $this->db->get();
 
 			return $query;
